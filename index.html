@@ -4,11 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="SCSS/Menu.css" />
     <title>My Portafolio</title>
   </head>
   <body>
     <main>
       <section class="info-section">
+        <h3 onclick="toggleMenu()">&lt;menu/&gt;</h3>
+        <nav class="menu">
+          <p onclick="closeMenu()">&lt;close/&gt;</p>
+          <ol>
+            <li class="menu-item"><a href="#0">Home</a></li>
+            <li class="menu-item"><a href="#0">About</a></li>
+            <li class="menu-item">
+              <a href="#0">Projects</a>
+              <ol class="sub-menu">
+                <li class="menu-item"><a href="#0">Project 1</a></li>
+                <li class="menu-item"><a href="#0">Project 2</a></li>
+                <li class="menu-item"><a href="#0">Project 3</a></li>
+              </ol>
+            </li>
+            <li class="menu-item">
+              <a href="#0">My work</a>
+              <ol class="sub-menu">
+                <li class="menu-item"><a href="#0">Experience</a></li>
+                <li class="menu-item"><a href="#0">Work</a></li>
+                <li class="menu-item"><a href="#0">Resume</a></li>
+              </ol>
+            </li>
+            <li class="menu-item"><a href="#0">Blog</a></li>
+            <li class="menu-item"><a href="#0">Contact</a></li>
+          </ol>
+        </nav>
         <div class="left-part">
           <h1>
             <span class="d-flex">Juan Flores</span> <span class="text"></span>
@@ -17,7 +44,7 @@
             I am a computer systems engineer, specialized in web development
             (occasionally DevOps, so I am still learning) I am very passionate
             about making both static and dynamic sites, if you are interested
-            you can send me an <a href="#" style="color: aqua;">email</a>.
+            you can send me an <a href="#" style="color: aqua">email</a>.
           </p>
           <a href="#" class="book-link">
             <span class="linktext">About me</span>

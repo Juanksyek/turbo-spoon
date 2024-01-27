@@ -88,7 +88,7 @@
   }
   
   .left-part h1 .text {
-    color: #00e5ff;
+    color: #6dc6e9;
     display: block;
     height: 200px;
   }
@@ -108,8 +108,8 @@
   }
   
   .left-part p {
-    width: 72%;
-    margin: 20px 0 0;
+    width: 80%;
+    margin: 20px 20px 0;
     color: #fff;
     font-size: 16px;
     font-style: normal;
@@ -121,7 +121,7 @@
   
   /* button */
   .book-link {
-    margin: 40px 0 0;
+    margin: 30px 30px 0;
     padding: 0;
     border: 0;
     font-size: 56px;

@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"  # O el comando que usas para construir tu aplicación
+  command = "node start"  # O el comando que usas para construir tu aplicación
   publish = "public"  # Ruta de los archivos que Netlify debe desplegar
 
 [context.production.environment]

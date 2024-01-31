@@ -3,7 +3,7 @@
   publish = "public"  # Ruta de los archivos que Netlify debe desplegar
 
 [context.production.environment]
-  NODE_VERSION = "14"  # Versión específica de Node.js
+  NODE_VERSION = "18"  # Versión específica de Node.js
 
 [[headers]]
   for = "/*"

@@ -16,10 +16,16 @@ app.get("/", function (req, res) {
 });
 
 //Regresar al index estando en cualquier opcion
-app.get("/home", function (req, res) {
+app.get("/index.html", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
+//Abrir la vista about-me
+app.get("/About-me/index.html", function(req, res) {
+  res.sendFile(__dirname + "/About-me/index.html")
+})
+
+//Abrir index en servidor o en localhots
 app.listen(process.env.PORT || 3000, function () {
   console.log("Server is running at port 3000");
 });

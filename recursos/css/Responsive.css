@@ -1,0 +1,158 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.imgfull {
+  width: 100% !important;
+  display: block !important;
+  float: left !important;
+}
+
+.imgpan {
+  width: 90%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.contergeneral {
+  width: 90% !important;
+  max-width: 1400px !important;
+  display: block !important;
+  overflow: hidden !important;
+  margin: 0 auto !important;
+}
+
+.contergeneral-tabla {
+  width: 90% !important;
+  max-width: 1400px !important;
+  display: block !important;
+  overflow: hidden !important;
+  margin: 0 auto !important;
+}
+
+.fullscreen-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgfull {
+  width: 100%;
+  height: auto;
+}
+
+
+/* .fullscreen-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+} */
+
+.fixed-container {
+  position: fixed !important;
+  bottom: 0;
+  right: -15px;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.animate {
+  animation: fadeIn 1s 0.9s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* global animations */
+@keyframes fadeInUp {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.fadeInUp-animation {
+  animation: 2s fadeInUp;
+}
+
+/* global styles */
+root {
+  --color1-color: #ffcf21;
+  --color2-color: #;
+  --color3-color: #;
+  --color4-color: #;
+}
+
+@media only screen and (min-width: 1920px) and (min-height: 1080px) and (max-width: 1920px) and (max-height: 1080px) {
+  .padd1 {
+    padding: 0 0 0 18% !important;
+  }
+  .let1 {
+    font-size: 24pt !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    font-size: 30pt !important;
+  }
+  h1 span {
+    font-size: 40pt !important;
+  }
+  h2 {
+    font-size: 30pt !important;
+  }
+  main {
+    height: 27vh !important;
+  }
+  .intro {
+    height: 28vh !important;
+  }
+  .main-fix {
+    height: 100vh !important;
+  }
+  .intro-fix {
+    height: 100vh !important;
+  }
+  .img-100 {
+    width: 100% !important;
+  }
+  .img-opa {
+    opacity: 0 !important;
+  }
+  .marg-topp {
+    margin-top: 5% !important;
+  }
+  .index1 .carousel1 {
+    width: 350px !important;
+  }
+  .wdt-vd {
+    width: 400px !important;
+  }
+  .wdt-icons {
+    width: 15% !important;
+  }
+}

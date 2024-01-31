@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + "/uploads"));
 
-app.use(express.static(__dirname + "/recursos"));
+app.use(express.static(__dirname + "/public"));
 
 //------------Aqui van los links y vistas------------//
 //Abrir index cuando se ejecuta el servidor

@@ -4,8 +4,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static("public"));
-
+app.use(express.static(__dirname + "/public"));
 //------------Aqui van los links y vistas------------//
 //Abrir index cuando se ejecuta el servidor
 //Esta parte del codigo siempre debe quedar hasta arriba :)

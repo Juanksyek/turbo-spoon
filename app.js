@@ -3,20 +3,12 @@ const bodyParser = require("body-parser");
 const helmet = require("helmet");
 const app = express();
 
-app.use(
-  helmet.contentSecurityPolicy({
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: [
-        "'self'",
-        "https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js",
-        "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
-        "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
-        "https://unpkg.com/split-type@0.3.4/umd/index.min.js",
-      ],
-    },
-  })
-);
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com', 'https://unpkg.com'],
+  },
+}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 

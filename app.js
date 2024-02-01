@@ -7,7 +7,10 @@ app.use(helmet.contentSecurityPolicy({
   directives: {
     defaultSrc: ["'self'"],
     scriptSrc: ["'self'"],
-    scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com', 'https://unpkg.com'],
+    scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js',],
+    scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js',],
+    scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',],
+    scriptSrc: ["'self'", 'https://unpkg.com/split-type@0.3.4/umd/index.min.js',],
   },
 }));
 

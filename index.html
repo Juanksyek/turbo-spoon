@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="SCSS/Menu.css" />
-    <link rel="stylesheet" href="css/Bootstrap.css">
-    <link rel="stylesheet" href="css/Responsive.css">
+    <link rel="stylesheet" href="css/Bootstrap.css" />
+    <link rel="stylesheet" href="css/Responsive.css" />
     <title>My Portafolio</title>
   </head>
   <body>
     <main>
       <section class="info-section">
-        <h3 onclick="toggleMenu()">&lt;menu/&gt;</h3>
+        <h3 id="menuToggle">&lt;menu/&gt;</h3>
         <nav class="menu">
-          <p onclick="closeMenu()">&lt;close/&gt;</p>
+          <p id="closeMenu">&lt;close/&gt;</p>
           <ol>
             <li class="menu-item"><a href="index.html">Home</a></li>
             <li class="menu-item"><a href="/About-me/index.html">About</a></li>
@@ -46,7 +46,7 @@
             I am a computer systems engineer, specialized in web development
             (occasionally DevOps, so I am still learning) I am very passionate
             about making both static and dynamic sites, if you are interested
-            you can send me an <a href="#" style="color: aqua">email</a>.
+            you can send me an <a href="#">email</a>.
           </p>
           <a href="/About-me/index.html" class="book-link">
             <span class="linktext">About me</span>
@@ -117,18 +117,36 @@
     </main>
     <div class="contergeneral">
       <h2>Hola</h2>
+      <h2>Hola2</h2>
     </div>
   </body>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="js/Menu.js"></script>
+  <script>
+    document.getElementById("menuToggle").addEventListener("click", toggleMenu);
+    document.getElementById("closeMenu").addEventListener("click", closeMenu);
 
+    //Menu script
+    function toggleMenu() {
+      var nav = document.getElementsByTagName("nav")[0];
+      if (nav.classList.contains("menu_active")) {
+        nav.classList.remove("menu_active");
+      } else {
+        nav.classList.add("menu_active");
+      }
+    }
+
+    function closeMenu() {
+      var nav = document.getElementsByTagName("nav")[0];
+      nav.classList.remove("menu_active");
+    }
+  </script>
   <script>
     // TypeScript
-    var typing = new Typed(".text", {
+    const typing = new Typed(".text", {
       strings: ["", "Web Developer", "Full-Stack."],
       typeSpeed: 100,
       backSpeed: 40,
@@ -138,13 +156,15 @@
     // GSAP
     gsap.registerPlugin(ScrollTrigger);
     const introsplitTypes = document.querySelectorAll(".left-part h1");
-    introsplitTypes.forEach((char, i) => {
-      const i_text = new SplitType(char);
-      gsap.to(i_text.chars, {
-        y: 0,
-        stagger: 0.08, // text splitting transition
-        duration: 0.3, // full text duration
-      });
+    introsplitTypes.forEach((element, i) => {
+      if (element instanceof HTMLElement) {
+        const i_text = new SplitType(element);
+        gsap.to(i_text.chars, {
+          y: 0,
+          stagger: 0.08,
+          duration: 0.3,
+        });
+      }
     });
   </script>
 </html>

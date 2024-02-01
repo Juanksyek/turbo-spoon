@@ -1,0 +1,17 @@
+[build]
+  command = "npm start"  # O el comando que usas para construir tu aplicación
+  publish = "public"  # Ruta de los archivos que Netlify debe desplegar
+
+[context.production.environment]
+  NODE_VERSION = "18"  # Versión específica de Node.js
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+      X-Frame-Options = "DENY"
+      X-XSS-Protection = "1; mode=block"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

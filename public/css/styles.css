@@ -34,7 +34,7 @@
   body {
     margin: 0;
     background-color: #212121;
-    background-image: url("https://www.yudiz.com/codepen/photography-banner/frame.png");
+    background-image: url("/links/PNG/frame.png");
   }
   
   ::selection {
@@ -143,6 +143,11 @@
     line-height: 2;
     font-family: "monument_extendedregular";
     opacity: 0.8;
+  }
+
+  .left-part p a{
+    color: #00e5ff;
+    text-decoration: none;
   }
   
   /* button */

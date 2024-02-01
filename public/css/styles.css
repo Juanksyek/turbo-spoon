@@ -144,6 +144,11 @@
     font-family: "monument_extendedregular";
     opacity: 0.8;
   }
+
+  .left-part p a{
+    color: #00e5ff;
+    text-decoration: none;
+  }
   
   /* button */
   .book-link {

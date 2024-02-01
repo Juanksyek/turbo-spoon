@@ -10,7 +10,10 @@
     [headers.values]
       X-Frame-Options = "DENY"
       X-XSS-Protection = "1; mode=block"
-      Content-Security-Policy = "default-src 'self'"
+      Content-Security-Policy = '''
+        default-src 'self';
+        script-src 'self' https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/ https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ https://unpkg.com/split-type@0.3.4/umd/;
+      '''
 
 [[redirects]]
   from = "/*"

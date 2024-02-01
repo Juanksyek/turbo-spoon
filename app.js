@@ -3,16 +3,20 @@ const bodyParser = require("body-parser");
 const helmet = require("helmet");
 const app = express();
 
-app.use(helmet.contentSecurityPolicy({
-  directives: {
-    defaultSrc: ["'self'"],
-    scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com', 'https://unpkg.com'],
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com', 'https://unpkg.com'],
+    },
   },
 }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/dist"));
+
 //------------Aqui van los links y vistas------------//
 //Abrir index cuando se ejecuta el servidor
 //Esta parte del codigo siempre debe quedar hasta arriba :)

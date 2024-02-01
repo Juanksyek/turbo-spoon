@@ -1,10 +1,10 @@
 {
   "name": "turbo-spoon",
   "version": "1.0.0",
-  "description": "Portafolio web",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Juan Flores",
   "license": "ISC",

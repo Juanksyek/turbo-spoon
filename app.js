@@ -1,18 +1,22 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const helmet = require('helmet');
+const helmet = require("helmet");
 const app = express();
 
-app.use(helmet.contentSecurityPolicy({
-  directives: {
-    defaultSrc: ["'self'"],
-    scriptSrc: ["'self'"],
-    scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js',],
-    scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js',],
-    scriptSrc: ["'self'", 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',],
-    scriptSrc: ["'self'", 'https://unpkg.com/split-type@0.3.4/umd/index.min.js',],
-  },
-}));
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: [
+        "'self'",
+        "https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+        "https://unpkg.com/split-type@0.3.4/umd/index.min.js",
+      ],
+    },
+  })
+);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -30,9 +34,9 @@ app.get("/index.html", function (req, res) {
 });
 
 //Abrir la vista about-me
-app.get("/About-me/index.html", function(req, res) {
-  res.sendFile(__dirname + "/About-me/index.html")
-})
+app.get("/About-me/index.html", function (req, res) {
+  res.sendFile(__dirname + "/About-me/index.html");
+});
 
 //Abrir index en servidor o en localhots
 app.listen(process.env.PORT || 3000, function () {
